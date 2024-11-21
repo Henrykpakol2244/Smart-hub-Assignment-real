@@ -1,0 +1,17 @@
+in the study of Python programming,we all know that there is usage of single and double quotes related to the declaration of the strings in Python. However, not all of us know that there is certain usage involving triple quotes too.
+
+This brief article reviews the usage of single, double, and triple quotes in Python.
+
+Single and Double Quotes
+Basic Usage
+The most common use of single and double quotes is to represent strings by enclosing a series of characters. As shown in the code below, we create these two strings using single and double quotes, respectively.
+
+>>> quotes_single = 'a_string'
+>>> quotes_double = "a_string"
+>>> quotes_single == quotes_double
+True
+As you notice, the strings created by using single and double quotes are the same. In other words, we can use single and double quotes interchangeably when we declare a string. However, it should be noted that we don’t want to mix them as it’s a syntactical error.
+
+>>> "mixed quotes'
+  File "<stdin>", line 1
+    "mixed quotes'…

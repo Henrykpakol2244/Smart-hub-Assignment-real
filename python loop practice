@@ -1,0 +1,346 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "0b68c34f-0951-408b-a376-561ab080b342",
+   "metadata": {},
+   "source": [
+    "## Conditional Loop"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "4858eb18-3ae3-4daf-9788-3e2ab57d90f7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f4c469ec-6e87-415e-8430-d27c8b43a1a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<module 'random' from 'C:\\\\Users\\\\Administrator\\\\anaconda3\\\\Lib\\\\random.py'>"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "bb0b75d8-824e-4478-92df-5aedb5854366",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "67"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.randint(10,100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "188ad72f-3105-4f00-825d-8d7085aa9ef8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'precious'"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.choice([\"precious\", \"henry\",\"gift\",\"love\",\"wisdom\"])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "4615da34-105c-4e5d-bf31-4c40908de50d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['wisdom']"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.choices([\"precious\", \"henry\",\"gift\",\"love\",\"wisdom\"])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "853cb45d-d65e-49a0-b3c2-532be0b564b9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['wisdom', 'love', 'gift']"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.choices([\"precious\", \"henry\",\"gift\",\"love\",\"wisdom\"],k=3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "ae5beab9-f263-44a0-be7c-0a6844e56b4a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[60, 16]"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.choices(range(1,100),k=2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "51f4b249-ede3-47fa-991b-40cb5f72ac97",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[20, 45, 15, 82]"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.choices(range(1,100),k=4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "13f3d5fe-18d0-4716-abbe-7ac0d4647bb4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[4, 5, 6, 7, 8, 9]"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(range(4,10))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ed3b91ac-09af-470c-bab0-297c38256f5f",
+   "metadata": {},
+   "source": [
+    "## Gussing game 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "d10d5177-688f-4b9a-ba21-5f6146ec6b61",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "my guess is 2\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Am i right?(y/n): n\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you're wrong\n",
+      "try):\n",
+      "you're wrong\n",
+      "try again\n",
+      "my guess is 9\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Am i right?(y/n): n\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you're wrong\n",
+      "try):\n",
+      "you're wrong\n",
+      "try again\n",
+      "my guess is 6\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Am i right?(y/n): n\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you're wrong\n",
+      "try):\n",
+      "you're wrong\n",
+      "try again\n",
+      "my guess is 9\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Am i right?(y/n): n\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you're wrong\n",
+      "try):\n",
+      "you're wrong\n",
+      "try again\n",
+      "my guess is 1\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Am i right?(y/n): n\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you're wrong\n",
+      "try):\n",
+      "you're wrong\n",
+      "try again\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(5):\n",
+    "    computer_guess=random.randint(1,10)\n",
+    "    print(f\"my guess is {computer_guess}\")\n",
+    "    response = input(\"Am i right?(y/n):\")\n",
+    "    if response==\"n\":\n",
+    "        print(\"you're wrong\\ntry):\")\n",
+    "        print(\"you're wrong\\ntry again\")\n",
+    "    else:\n",
+    "        print(\"Great!!\\nyou'got it right\")\n",
+    "        break "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "09e0202d-9258-47f0-a73b-1a39699fa6de",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for i in range(5): \n",
+    "    user_input==int(input "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
