@@ -1,0 +1,164 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "7eddfbf1-cb47-4751-b523-2a488f047c5c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter' a sentence: Henry is a boy\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "number of words is{number_of_words}\n"
+     ]
+    }
+   ],
+   "source": [
+    "sentence=input(\"Enter' a sentence:\")\n",
+    "sentence_list=sentence.split(\" \")\n",
+    "number_of_words=len(sentence_list)\n",
+    "print(\"number of words is{number_of_words}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "75caa26d-9dd6-47d1-9409-2732688c9fc1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter' a sentence: this is beautiful\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "number of words is3\n"
+     ]
+    }
+   ],
+   "source": [
+    "sentence=input(\"Enter' a sentence:\")\n",
+    "sentence_list=sentence.split(\" \")\n",
+    "number_of_words=len(sentence_list)\n",
+    "print(f\"number of words is{number_of_words}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "14f7b00f-9ff6-490c-9227-25d3e91cb7bb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['this', 'is', 'beautiful']"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sentence_list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "fe53a1f0-e5e5-4593-bd44-aefbba105e20",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter' a sentence: this is nice\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['this', 'is', 'nice']\n",
+      "['this', 'is', 'nice']\n",
+      "number of words is3\n"
+     ]
+    }
+   ],
+   "source": [
+    "sentence=input(\"Enter' a sentence:\")\n",
+    "sentence_list=sentence.split(\" \")\n",
+    "print(sentence_list)\n",
+    "sentence_list=sentence.strip().split(\" \")\n",
+    "print(sentence_list)\n",
+    "number_of_words=len(sentence_list)\n",
+    "print(f\"number of words is{number_of_words}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f8dac1dc-da2f-4634-9f0e-f01ce43f7a9a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'this is nice'"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sentence"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9a4c54e9-ec8f-40cc-9b6b-1fdc68559c9b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
